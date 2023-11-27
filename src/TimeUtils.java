@@ -21,19 +21,18 @@ public class TimeUtils {
         mm = a / 60;
         ss = a - (60 * mm);
 
-        return String.format("%02d:%02d:%02d", hh, mm, ss);
-//        String res = hh + ":";
-//        if (mm <= 10) {
-//            res = res + "0" + mm + ":";
-//        } else {
-//            res = res + mm + ":";
-//        }
-//        if (ss <= 10) {
-//            res = res + "0" + ss;
-//        } else {
-//            res = res + ss;
-//        }
-//
-//        return res;
+        String res = hh + ":";
+        if (mm <= 10) {
+            res = res + "0" + mm + ":";
+        } else {
+            res = res + mm + ":";
+        }
+        if (ss <= 10) {
+            res = res + "0" + ss;
+        } else {
+            res = res + ss;
+        }
+
+        return res;
     }
 }
